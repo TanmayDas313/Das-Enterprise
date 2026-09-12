@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources &amp; Knowledge Hub | Hisab Kitab - Powered by Das Enterprises</title>
+  <meta name="description" content="Access free Tally Prime tutorials, GST statutory updates, business accounting guides, webinars, and frequently asked technical questions.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230B192C'/><path d='M9 8h4v16H9zm10 0h4v16h-4zm-7 6h4v4h-4z' fill='%2314B8A6'/></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="brand-logo-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path>
+            <path d="M8 7h6"></path><path d="M8 11h8"></path><path d="M8 15h5"></path>
+          </svg>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-name">Hisab Kitab<span class="accent-dot">•</span></span>
+          <span class="brand-partner">Powered by <strong>Das Enterprises</strong></span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="solutions.html" class="nav-link">Solutions</a>
+        <a href="resources.html" class="nav-link active">Resources</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-primary btn-sm btn-free-demo" data-open-modal="demoModal">Free Demo</button>
+        <a href="get-started.html" class="btn btn-outline btn-sm">Get Started</a>
+        <button class="mobile-toggle" aria-label="Open Navigation Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-drawer">
+    <div class="drawer-header">
+      <div class="brand-text-block">
+        <span class="brand-name">Hisab Kitab</span>
+        <span class="brand-partner">Powered by <strong>Das Enterprises</strong></span>
+      </div>
+      <button class="drawer-close" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="drawer-menu">
+      <a href="index.html" class="drawer-link">Home</a>
+      <a href="solutions.html" class="drawer-link">Solutions</a>
+      <a href="resources.html" class="drawer-link active">Resources</a>
+      <a href="pricing.html" class="drawer-link">Pricing</a>
+      <a href="about.html" class="drawer-link">About</a>
+      <a href="contact.html" class="drawer-link">Contact</a>
+    </div>
+    <div class="drawer-actions">
+      <button class="btn btn-primary btn-free-demo" data-open-modal="demoModal">Get a Free Demo</button>
+      <a href="get-started.html" class="btn btn-outline">Get Started</a>
+    </div>
+  </aside>
+
+  <!-- BREADCRUMBS & HERO WITH SEARCH -->
+  <section class="section-sm bg-light" style="border-bottom: 1px solid var(--slate-200); text-align: center;">
+    <div class="container">
+      <nav class="breadcrumbs" style="justify-content: center;">
+        <a href="index.html">Home</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <span>Resources</span>
+      </nav>
+      <div class="section-badge badge-teal">Knowledge Hub</div>
+      <h1 style="font-size: 2.75rem; margin-bottom: 1rem;">Master Tally Prime &amp; Business Accounting</h1>
+      <p class="section-subtitle" style="max-width: 720px; margin: 0 auto 2.5rem auto;">
+        Tutorials, statutory tax circulars, implementation guides, and FAQs curated by the Das Enterprises technical team.
+      </p>
+
+      <!-- Live Search Input -->
+      <div style="max-width: 580px; margin: 0 auto; position: relative;">
+        <input type="text" id="resourceSearchInput" class="form-control" placeholder="Search guides, GST tips, tutorials..." style="padding-left: 2.8rem; padding-top: 0.9rem; padding-bottom: 0.9rem; font-size: 1rem; border-radius: var(--radius-full); box-shadow: var(--shadow-md);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--slate-400)" stroke-width="2" style="position: absolute; left: 1.1rem; top: 50%; transform: translateY(-50%);">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.75rem;">
+        <button class="btn btn-sm btn-outline resource-cat-btn active" data-category="all">All Topics</button>
+        <button class="btn btn-sm btn-outline resource-cat-btn" data-category="gst">GST Updates</button>
+        <button class="btn btn-sm btn-outline resource-cat-btn" data-category="tips">Accounting Tips</button>
+        <button class="btn btn-sm btn-outline resource-cat-btn" data-category="tutorials">Tally Tutorials</button>
+        <button class="btn btn-sm btn-outline resource-cat-btn" data-category="automation">Automation</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES GRID -->
+  <section class="section bg-white" id="blog">
+    <div class="container">
+      <div class="grid-3" id="resourceCardsContainer">
+        <!-- Card 1 -->
+        <div class="card resource-card" data-category="gst">
+          <span class="section-badge badge-gold" style="margin-bottom: 0.75rem;">GST Updates</span>
+          <h3 class="card-title">GSTR-2B vs 2A Reconciliation: Reclaiming Every Rupee of ITC</h3>
+          <p class="card-text">
+            Step-by-step procedure to automate input tax credit matching in Tally Prime, identifying supplier default before filing GSTR-3B.
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--slate-400); margin-top: auto;">
+            <span>5 min read • Tax Desk</span>
+            <span style="color: var(--teal-700); font-weight: 600;">Read Guide &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card resource-card" data-category="tutorials">
+          <span class="section-badge badge-teal" style="margin-bottom: 0.75rem;">Tally Tutorials</span>
+          <h3 class="card-title">Configuring Multi-Godown Transfers &amp; Delivery Challans</h3>
+          <p class="card-text">
+            How to record stock transfers between factory godowns and retail outlets while keeping statutory delivery challans synchronized.
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--slate-400); margin-top: auto;">
+            <span>8 min read • Operations</span>
+            <span style="color: var(--teal-700); font-weight: 600;">Read Guide &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card resource-card" data-category="automation">
+          <span class="section-badge badge-navy" style="margin-bottom: 0.75rem;">Automation</span>
+          <h3 class="card-title">Eliminating Manual Invoicing: E-Commerce Sync with Tally</h3>
+          <p class="card-text">
+            Discover how API bridges ingest orders from Shopify, Amazon, and WooCommerce directly into Tally sales vouchers with zero data entry.
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--slate-400); margin-top: auto;">
+            <span>6 min read • Tech Team</span>
+            <span style="color: var(--teal-700); font-weight: 600;">Read Guide &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card resource-card" data-category="tips">
+          <span class="section-badge badge-teal" style="margin-bottom: 0.75rem;">Accounting Tips</span>
+          <h3 class="card-title">Mastering Debtor Aging &amp; Accelerating Cash Flow Recovery</h3>
+          <p class="card-text">
+            Use Tally Prime’s aging analysis reports to automate payment reminder letters, optimize working capital, and reduce bad debts.
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--slate-400); margin-top: auto;">
+            <span>4 min read • Advisory</span>
+            <span style="color: var(--teal-700); font-weight: 600;">Read Guide &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card resource-card" data-category="gst">
+          <span class="section-badge badge-gold" style="margin-bottom: 0.75rem;">GST Updates</span>
+          <h3 class="card-title">MCA Audit Trail (Edit Log) Compliance Rules for FY 2025-26</h3>
+          <p class="card-text">
+            Essential guidelines for Indian private limited companies regarding non-alterable audit logs and auditor certification under CARO.
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--slate-400); margin-top: auto;">
+            <span>7 min read • Compliance</span>
+            <span style="color: var(--teal-700); font-weight: 600;">Read Guide &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card resource-card" data-category="tutorials">
+          <span class="section-badge badge-teal" style="margin-bottom: 0.75rem;">Tally Tutorials</span>
+          <h3 class="card-title">Auto Bank Reconciliation (BRS) with HDFC, ICICI, SBI</h3>
+          <p class="card-text">
+            How to link your corporate bank accounts directly into Tally Prime for instant one-click cheque clearance and electronic statements.
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--slate-400); margin-top: auto;">
+            <span>5 min read • Banking</span>
+            <span style="color: var(--teal-700); font-weight: 600;">Read Guide &rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO TUTORIALS & WEBINARS -->
+  <section class="section bg-light" id="tutorials">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge badge-teal">Video Learning</div>
+        <h2 class="section-title">Video Tutorials &amp; Live Training</h2>
+        <p class="section-subtitle">
+          Watch structured walkthroughs covering basic operations, inventory controls, and advanced reporting.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <div style="background: var(--navy-900); height: 180px; display: flex; align-items: center; justify-content: center; position: relative;">
+            <div style="width: 52px; height: 52px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+            <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; font-size: 0.75rem; padding: 2px 6px; border-radius: 4px; font-family: var(--font-mono);">12:45</span>
+          </div>
+          <div style="padding: 1.5rem;">
+            <span class="section-badge badge-teal" style="margin-bottom: 0.5rem;">Getting Started</span>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Tally Prime Quickstart &amp; Master Setup</h4>
+            <p style="font-size: 0.85rem; color: var(--slate-600);">Learn how to set up company profile, GSTIN, chart of accounts, and opening balances.</p>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <div style="background: var(--navy-900); height: 180px; display: flex; align-items: center; justify-content: center; position: relative;">
+            <div style="width: 52px; height: 52px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+            <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; font-size: 0.75rem; padding: 2px 6px; border-radius: 4px; font-family: var(--font-mono);">18:20</span>
+          </div>
+          <div style="padding: 1.5rem;">
+            <span class="section-badge badge-teal" style="margin-bottom: 0.5rem;">Basic Operations</span>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Sales, Purchases &amp; e-Way Bill Direct Sync</h4>
+            <p style="font-size: 0.85rem; color: var(--slate-600);">Mastering rapid invoice creation, tax classification, and direct NIC portal connectivity.</p>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <div style="background: var(--navy-900); height: 180px; display: flex; align-items: center; justify-content: center; position: relative;">
+            <div style="width: 52px; height: 52px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+            <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; font-size: 0.75rem; padding: 2px 6px; border-radius: 4px; font-family: var(--font-mono);">24:15</span>
+          </div>
+          <div style="padding: 1.5rem;">
+            <span class="section-badge badge-gold" style="margin-bottom: 0.5rem;">Advanced Features</span>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Cost Center Accounting &amp; Executive MIS</h4>
+            <p style="font-size: 0.85rem; color: var(--slate-600);">Deep dive into branch profitability, project costing, and custom ratio analysis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYSTEM REQUIREMENTS & DOCUMENTATION -->
+  <section class="section bg-white" id="docs">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge badge-navy">Technical Guides</div>
+        <h2 class="section-title">System Requirements &amp; Setup Docs</h2>
+        <p class="section-subtitle">
+          Ensure your hardware and operating environment meet recommended specifications for peak Tally Prime performance.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">Tally Prime Desktop Requirements</h3>
+          <div class="feature-list" style="margin-top: 1rem;">
+            <div class="feature-item"><div class="feature-check">✓</div><span><strong>OS:</strong> 64-bit Windows 10, Windows 11, or Windows Server 2019/2022.</span></div>
+            <div class="feature-item"><div class="feature-check">✓</div><span><strong>Processor:</strong> Intel Core i3 8th Gen / AMD Ryzen 3 or higher.</span></div>
+            <div class="feature-item"><div class="feature-check">✓</div><span><strong>RAM:</strong> 8 GB minimum (16 GB recommended for multi-user server).</span></div>
+            <div class="feature-item"><div class="feature-check">✓</div><span><strong>Disk:</strong> Solid State Drive (SSD) with at least 500 MB free for app and data.</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Tally on Cloud Requirements</h3>
+          <div class="feature-list" style="margin-top: 1rem;">
+            <div class="feature-item"><div class="feature-check">✓</div><span><strong>Devices Supported:</strong> Windows PC, Apple Mac, iPad, Android Tablets.</span></div>
+            <div class="feature-item"><div class="feature-check">✓</div><span><strong>Internet Connection:</strong> Stable broadband connection (2 Mbps or higher per user).</span></div>
+            <div class="feature-item"><div class="feature-check">✓</div><span><strong>Printer Compatibility:</strong> Supports all local USB, Network, and Wireless printers.</span></div>
+            <div class="feature-item"><div class="feature-check">✓</div><span><strong>Zero Local Hardware Maintenance:</strong> Managed server updates by Das Enterprises.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION -->
+  <section class="section bg-light" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge badge-teal">Got Questions?</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Find rapid answers regarding licensing, GST configurations, cloud deployment, and our AMC support services.
+        </p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item open">
+          <button class="faq-trigger">
+            <span>What is the difference between Tally Prime Silver and Gold?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content" style="max-height: 200px;">
+            <div class="faq-body">
+              Tally Prime Silver is a standalone single-user license intended for one computer at a time. Tally Prime Gold is an unlimited multi-user license that allows multiple computers connected across your Local Area Network (LAN) or private cloud to access the same accounting data concurrently.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>Can Hisab Kitab migrate data from our older Tally ERP 9 or Excel?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content">
+            <div class="faq-body">
+              Yes, absolutely. Our implementation team at Das Enterprises specializes in clean data migration. We verify opening balances, validate master GSTINs, remove duplicate ledgers, and migrate complete transaction history seamlessly without downtime.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>How does Tally on Cloud ensure our data remains confidential?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content">
+            <div class="faq-body">
+              Our cloud servers are hosted in Tier-IV Indian data centers complying with strict data residency laws. Every session is encrypted via SSL/TLS, access is controlled via granular IP or two-factor authentication, and automated encrypted snapshots are created daily.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>What kind of Annual Maintenance Contract (AMC) support do you offer?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content">
+            <div class="faq-body">
+              We provide comprehensive AMC coverage including telephone support, direct WhatsApp resolution desk, remote desktop screen-sharing assistance for troubleshooting, periodic data health audits, and guidance during month-end GST filing.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>Can you customize tax invoices with our company logo and terms?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content">
+            <div class="faq-body">
+              Yes. Our in-house TDL (Tally Definition Language) developers can tailor your invoice format with high-resolution brand logos, custom terms of sale, dynamic bank QR codes for UPI payments, and signature boxes.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-navy" style="text-align: center;">
+    <div class="container container-narrow">
+      <h2 style="color: white; margin-bottom: 1rem;">Have a Question Not Listed Here?</h2>
+      <p style="color: var(--slate-300); font-size: 1.15rem; margin-bottom: 2.5rem;">
+        Our technical support team is standing by to assist your accounts department.
+      </p>
+      <a href="contact.html" class="btn btn-primary btn-lg">Ask Our Support Desk</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>
+          © 2026 Hisab Kitab / Das Enterprises. All Rights Reserved. &bull; Address: B-201, Status 2, Opposite R3 Mall, Drive in Road, Ahmedabad- 380052
+        </div>
+        <div class="footer-links" style="flex-direction: row; gap: 1.5rem;">
+          <a href="index.html">Home</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="resources.html">Resources</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="demoModal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <span class="section-badge badge-teal">Live Demonstration</span>
+      <h3 style="font-size: 1.45rem; margin-bottom: 0.5rem;">Request a Free Tally Prime Demo</h3>
+      <form id="modalDemoForm">
+        <div class="form-group"><label class="form-label">Full Name *</label><input type="text" class="form-control" required></div>
+        <div class="form-group"><label class="form-label">Business Name *</label><input type="text" class="form-control" required></div>
+        <div class="form-group"><label class="form-label">Phone Number *</label><input type="tel" name="phone" class="form-control" required></div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Schedule Free Demo</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
