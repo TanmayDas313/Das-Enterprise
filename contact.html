@@ -177,35 +177,35 @@
           <h3 style="margin-bottom: 0.5rem; font-size: 1.45rem;">Send an Inquiry</h3>
           <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 2rem;">Fill out this brief form and our lead accounting consultant will contact you.</p>
 
-          <form class="validated-form">
+          <form class="validated-form" id="contactForm">
             <div class="form-group">
-              <label class="form-label">Your Full Name *</label>
-              <input type="text" class="form-control" placeholder="e.g. Vikram Verma" required>
+              <label class="form-label" for="ctName">Your Full Name *</label>
+              <input type="text" id="ctName" class="form-control" placeholder="e.g. Vikram Verma" required>
               <div class="form-error-msg">Please enter your name</div>
             </div>
 
             <div class="form-group">
-              <label class="form-label">Business / Firm Name *</label>
-              <input type="text" class="form-control" placeholder="e.g. Verma Logistics Pvt Ltd" required>
+              <label class="form-label" for="ctBiz">Business / Firm Name *</label>
+              <input type="text" id="ctBiz" class="form-control" placeholder="e.g. Verma Logistics Pvt Ltd" required>
               <div class="form-error-msg">Please enter your business name</div>
             </div>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
               <div class="form-group">
-                <label class="form-label">Contact Phone *</label>
-                <input type="tel" name="phone" class="form-control" placeholder="98250 12345" required>
+                <label class="form-label" for="ctPhone">Contact Phone *</label>
+                <input type="tel" id="ctPhone" name="phone" class="form-control" placeholder="98250 12345" required>
                 <div class="form-error-msg">Enter a valid 10-digit number</div>
               </div>
               <div class="form-group">
-                <label class="form-label">Email Address *</label>
-                <input type="email" class="form-control" placeholder="vikram@verma.com" required>
+                <label class="form-label" for="ctEmail">Email Address *</label>
+                <input type="email" id="ctEmail" class="form-control" placeholder="vikram@verma.com" required>
                 <div class="form-error-msg">Enter a valid email</div>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label">Select Your Industry *</label>
-              <select class="form-control" required>
+              <label class="form-label" for="ctIndustry">Select Your Industry *</label>
+              <select id="ctIndustry" class="form-control" required>
                 <option value="">Select industry</option>
                 <option value="retail">Retail &amp; Supermarket</option>
                 <option value="mfg">Manufacturing &amp; Engineering</option>
@@ -218,8 +218,8 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label">How can we help your business? *</label>
-              <textarea class="form-control" placeholder="Tell us what you want to achieve with Tally Prime or describe your current accounting pain points..." required></textarea>
+              <label class="form-label" for="ctMessage">How can we help your business? *</label>
+              <textarea id="ctMessage" class="form-control" placeholder="Tell us what you want to achieve with Tally Prime or describe your current accounting pain points..." required></textarea>
               <div class="form-error-msg">Please write a brief message</div>
             </div>
 
