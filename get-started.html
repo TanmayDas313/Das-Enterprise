@@ -164,35 +164,35 @@
             Please complete the details below. We only collect the essential information required to configure your demo.
           </p>
 
-          <form class="validated-form">
+           <form class="validated-form" id="getStartedForm">
             <div class="form-group">
-              <label class="form-label">Full Name *</label>
-              <input type="text" class="form-control" placeholder="e.g. Ramesh Chandra" required>
+              <label class="form-label" for="gsName">Full Name *</label>
+              <input type="text" id="gsName" class="form-control" placeholder="e.g. Ramesh Chandra" required>
               <div class="form-error-msg">Please enter your full name</div>
             </div>
 
             <div class="form-group">
-              <label class="form-label">Business / Entity Name *</label>
-              <input type="text" class="form-control" placeholder="e.g. Chandra Enterprises LLP" required>
+              <label class="form-label" for="gsBiz">Business / Entity Name *</label>
+              <input type="text" id="gsBiz" class="form-control" placeholder="e.g. Chandra Enterprises LLP" required>
               <div class="form-error-msg">Please enter your business name</div>
             </div>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
               <div class="form-group">
-                <label class="form-label">Work Email *</label>
-                <input type="email" class="form-control" placeholder="ramesh@chandra.in" required>
+                <label class="form-label" for="gsEmail">Work Email *</label>
+                <input type="email" id="gsEmail" class="form-control" placeholder="ramesh@chandra.in" required>
                 <div class="form-error-msg">Enter a valid email address</div>
               </div>
               <div class="form-group">
-                <label class="form-label">Contact Phone *</label>
-                <input type="tel" name="phone" class="form-control" placeholder="98250 98765" required>
+                <label class="form-label" for="gsPhone">Contact Phone *</label>
+                <input type="tel" id="gsPhone" name="phone" class="form-control" placeholder="98250 98765" required>
                 <div class="form-error-msg">Enter a valid 10-digit number</div>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label">Business Industry *</label>
-              <select class="form-control" required>
+              <label class="form-label" for="gsIndustry">Business Industry *</label>
+              <select id="gsIndustry" class="form-control" required>
                 <option value="">Select your sector</option>
                 <option value="retail">Retail &amp; Supermarket</option>
                 <option value="mfg">Manufacturing &amp; Engineering</option>
@@ -205,8 +205,8 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label">Primary Requirement *</label>
-              <select class="form-control" required>
+              <label class="form-label" for="gsRequirement">Primary Requirement *</label>
+              <select id="gsRequirement" class="form-control" required>
                 <option value="">What is your primary requirement?</option>
                 <option value="new">New Tally Prime License (Silver / Gold)</option>
                 <option value="upgrade">Upgrade / Migration from Tally ERP 9</option>
@@ -219,8 +219,8 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label">Additional Operational Notes (Optional)</label>
-              <textarea class="form-control" style="min-height: 80px;" placeholder="Tell us about number of users, branches, or specific pain points..."></textarea>
+              <label class="form-label" for="gsNotes">Additional Operational Notes (Optional)</label>
+              <textarea id="gsNotes" class="form-control" style="min-height: 80px;" placeholder="Tell us about number of users, branches, or specific pain points..."></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
@@ -231,6 +231,7 @@
               🔒 We respect your privacy. No spam. No unsolicited marketing.
             </div>
           </form>
+
         </div>
       </div>
     </div>
