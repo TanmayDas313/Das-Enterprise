@@ -314,5 +314,162 @@
   </div>
 
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/supabase-config.js"></script>
+<script>
+(function () {
+  const { createClient } = supabase;
+  const sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  const form = document.getElementById('modalDemoForm');
+  if (!form) return;
+
+  const fields = {
+    name: document.getElementById('modalName'),
+    biz: document.getElementById('modalBiz'),
+    phone: document.getElementById('modalPhone'),
+    email: document.getElementById('modalEmail'),
+    industry: document.getElementById('modalIndustry'),
+    req: document.getElementById('modalReq'),
+  };
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  const honeypot = document.createElement('input');
+  honeypot.type = 'text';
+  honeypot.name = 'website';
+  honeypot.autocomplete = 'off';
+  honeypot.tabIndex = -1;
+  honeypot.setAttribute('aria-hidden', 'true');
+  honeypot.style.cssText = 'position:absolute;left:-9999px;width:1px;height:1px;opacity:0;';
+  form.appendChild(honeypot);
+
+  const statusBox = document.createElement('div');
+  statusBox.id = 'modalFormStatus';
+  statusBox.style.cssText = 'margin-top:12px;padding:10px 14px;border-radius:8px;font-size:0.9rem;display:none;text-align:center;';
+  form.appendChild(statusBox);
+
+  function showStatus(message, type) {
+    statusBox.textContent = message;
+    statusBox.style.display = 'block';
+    if (type === 'success') {
+      statusBox.style.background = '#dcfce7';
+      statusBox.style.color = '#15803d';
+    } else {
+      statusBox.style.background = '#fef2f2';
+      statusBox.style.color = '#dc2626';
+    }
+  }
+  function clearStatus() {
+    statusBox.style.display = 'none';
+  }
+
+  function setFieldError(input, show) {
+    const group = input.closest('.form-group');
+    if (!group) return;
+    const msg = group.querySelector('.form-error-msg');
+    if (msg) msg.style.display = show ? 'block' : 'none';
+    input.style.borderColor = show ? '#dc2626' : '';
+  }
+
+  function validateName() {
+    const ok = fields.name.value.trim().length >= 2;
+    setFieldError(fields.name, !ok);
+    return ok;
+  }
+  function validateBiz() {
+    const ok = fields.biz.value.trim().length >= 2;
+    setFieldError(fields.biz, !ok);
+    return ok;
+  }
+  function validatePhone() {
+    const digits = fields.phone.value.replace(/\D/g, '');
+    const ok = /^[6-9]\d{9}$/.test(digits);
+    setFieldError(fields.phone, !ok);
+    return ok;
+  }
+  function validateEmail() {
+    const ok = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(fields.email.value.trim());
+    setFieldError(fields.email, !ok);
+    return ok;
+  }
+  function validateIndustry() {
+    const ok = fields.industry.value !== '';
+    setFieldError(fields.industry, !ok);
+    return ok;
+  }
+
+  fields.name.addEventListener('blur', validateName);
+  fields.biz.addEventListener('blur', validateBiz);
+  fields.phone.addEventListener('blur', validatePhone);
+  fields.email.addEventListener('blur', validateEmail);
+  fields.industry.addEventListener('change', validateIndustry);
+
+  let isSubmitting = false;
+  let lastSubmitKey = '';
+  let lastSubmitTime = 0;
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    clearStatus();
+
+    if (honeypot.value) {
+      showStatus('Thank you! Our team will contact you shortly.', 'success');
+      form.reset();
+      return;
+    }
+
+    const valid =
+      validateName() & validateBiz() & validatePhone() & validateEmail() & validateIndustry();
+    if (!valid) {
+      showStatus('Please fix the highlighted fields above.', 'error');
+      return;
+    }
+
+    if (isSubmitting) return;
+
+    const submitKey = fields.phone.value.trim() + '|' + fields.email.value.trim();
+    const now = Date.now();
+    if (submitKey === lastSubmitKey && now - lastSubmitTime < 30000) {
+      showStatus('You already submitted this. Our team will be in touch shortly.', 'error');
+      return;
+    }
+
+    isSubmitting = true;
+    submitBtn.disabled = true;
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+
+    const payload = {
+      full_name: fields.name.value.trim(),
+      business_name: fields.biz.value.trim(),
+      phone: fields.phone.value.replace(/\D/g, ''),
+      email: fields.email.value.trim(),
+      industry: fields.industry.options[fields.industry.selectedIndex].text,
+      requirement: fields.req.value.trim() || null,
+    };
+
+    const { error } = await sb.from('enquiries').insert([payload]);
+
+    isSubmitting = false;
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+
+    if (error) {
+      if (error.code === '23505') {
+        showStatus("Looks like you've already submitted a request today. Our team will reach out soon!", 'error');
+      } else {
+        showStatus('Something went wrong. Please try again or call us directly.', 'error');
+      }
+      return;
+    }
+
+    lastSubmitKey = submitKey;
+    lastSubmitTime = now;
+    showStatus('Thank you! Your demo request has been received. Our team will contact you within 24 hours.', 'success');
+    form.reset();
+  });
+})();
+</script>
+
 </body>
 </html>
